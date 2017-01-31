@@ -1,0 +1,40 @@
+{{>header}}
+<main>
+ 
+	<div>
+		{{content}} 
+	</div>
+	<form id="form-inscription" class="form-horizontal" method="post" action="#">
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="Nom">Nom</label>
+			<div class="col-md-6">
+				<input id="input-inscription-nom" name="insc_nom" placeholder="Gerard" class="form-control input-md" type="text" />
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="Pseudo">E-mail</label>
+			<div class="col-md-6">
+				<input id="input-inscription-email" name="insc_email" placeholder="monadresse@adresse.fr" class="form-control input-md" type="text" />
+			</div>
+		</div>
+
+		<!-- Password input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="Mot-de-passe">Mot-de-passe</label>
+			<div class="col-md-6">
+				<input id="input-inscription-password" name="insc_password" placeholder="*********" class="form-control input-md" type="password" />
+			</div>
+		</div>
+
+		<!-- Button -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="Inscription"></label>
+			<div class="col-md-6">
+				<button id="Incription" name="inscription" class="btn btn-primary">Inscription</button>
+			</div>
+		</div>
+	</form>
+</main>

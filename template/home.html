@@ -1,0 +1,39 @@
+  {{>header}}
+      <main class="container">
+    {{>museelike}}
+
+  </main>
+
+  <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+<script>
+$(document).ready(function(){
+  $(".button2").live('click',function(){
+    var id = $(this).data('id');
+      callAjax("like",id);
+    });
+
+$(".button1").live('click',function(){
+    var id = $(this).data('id');
+      callAjax("dislike",id);
+    });
+
+
+  function callAjax(url,id){
+        $.ajax({
+          type: "POST",
+          url: url+"/"+id+"/",
+          success: function(result){
+            var result = JSON.parse(result);
+            $('main').empty();
+            $('main').html(result);
+        }
+    });
+  }
+
+
+
+
+});
+
+
+</script>

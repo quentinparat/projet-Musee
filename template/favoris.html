@@ -1,0 +1,19 @@
+{{>header}}
+
+<link rel="stylesheet" href="{{URL}}/assets/css/favoristyle.css">
+
+<main>
+  <section class="container">
+    <article class="musee">
+	{{#LIST}}
+      <figure>
+          <figcaption class="col-xs-12 col-md-6">
+            <a href="{{URL}}musee/{{id_musee}}/">
+            <img src="{{image}}" alt="Photo de musée">
+            <p>{{nom_musee}}</p></a>
+          </figcaption>
+      </figure>
+	  {{/LIST}}
+    </article>
+  </section>
+</main>

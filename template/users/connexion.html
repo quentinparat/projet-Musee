@@ -1,0 +1,18 @@
+{{>header}}
+
+<main>
+
+{{#SHOW}}
+	{{#status}}
+		{{content}}
+	{{/status}}	
+	<form method="post">
+		<input type="text" name="connexionEmail" />
+		<input type="password" name="connexionMDP" />
+		<input type="submit" name="connexion" value="connexion" />
+	</form>
+{{/SHOW}}
+{{^SHOW}}
+	{{content}} <a href="{{URL}}deconnexion/">Déconnexion</a>
+{{/SHOW}}
+</main>

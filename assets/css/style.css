@@ -1,0 +1,318 @@
+@font-face {
+    font-family: harlow;
+    src: url(../fonts/harlow.ttf);
+}
+
+@font-face {
+    font-family: candara;
+    src: url(../fonts/candara.ttf);
+}
+
+
+/*BURGER MENU CSS*/
+
+@-webkit-keyframes slideInLeft {
+    0% {
+        -webkit-transform: translate3d(-250px, 0, 0);
+        transform: translate3d(-250px, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        -webkit-transform: translate3d(-250px, 0, 0);
+        transform: translate3d(-250px, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes slideOutLeft {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(-250px, 0, 0);
+        transform: translate3d(-250px, 0, 0);
+        visibility: hidden;
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(-250px, 0, 0);
+        transform: translate3d(-250px, 0, 0);
+        visibility: hidden;
+    }
+}
+
+.burger-font {
+    font-family: candara;
+}
+
+.burger-choices1 {
+    font-size: 4rem;
+}
+
+.burger-choices2 {
+    font-size: 4rem;
+}
+
+.burger-choices3 {
+    font-size: 4rem;
+}
+
+.b-nav {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 11;
+    background-color: rgb(255, 255, 255);
+}
+
+.b-nav:not(.open) {
+    visibility: hidden;
+}
+
+.b-nav li {
+    color: #444444;
+    list-style-type: none;
+    text-align: left;
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+}
+
+.b-nav li:first-child {}
+
+.b-nav.open {
+    visibility: visible;
+}
+
+.b-nav.open li {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+}
+
+.b-link:focus, .b-link:hover {
+    color: #c1272d;
+}
+
+.b-link {
+    background: transparent;
+    border-left: rgba(68, 68, 68, 0) solid 2px;
+    color: #444444;
+    font-family: candara;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.b-menu {
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 20%;
+    width: 50%;
+    padding-left: 5%;
+    padding-top: 8%;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 12;
+}
+
+.b-bun {
+    background: #444444;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.b-bun--top {
+    height: 2px;
+    width: 35px;
+}
+
+.b-bun--mid {
+    height: 2px;
+    top: 7px;
+    width: 35px;
+}
+
+.b-bun--bottom {
+    height: 2px;
+    top: 14px;
+    width: 35px;
+}
+
+.b-container {
+    height: 30%;
+    width: 8.5%;
+    left: 5%;
+    top: 3%;
+    position: absolute;
+}
+
+.b-container:hover:not(.open) .bun-top, .b-container:hover:not(.open) .bun-mid, .b-container:hover:not(.open) .bun-bottom {
+    background: rgb(255, 255, 255);
+}
+
+.b-container.open .b-bun--top {
+    background: #444444;
+    top: 9px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.b-container.open .b-bun--mid {
+    opacity: 0;
+}
+
+.b-container.open .b-bun--bottom {
+    background: #444444;
+    top: 5px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.b-container.open .b-brand {
+    color: #444444;
+}
+
+
+/*END*/
+
+
+/*NORMAL CSS*/
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.site-title {
+    margin-bottom: 5%;
+    margin-top: 3%;
+    margin-left: 35%;
+    width: 30vw;
+    height: 10vh;
+}
+
+.tind-card {
+    margin-top: 10%;
+    -webkit-box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
+    box-shadow: 4px 4px 22px 0px rgba(0, 0, 0, 0.42);
+}
+
+.button1 {
+    border-radius: 50px;
+    background: transparent;
+    border-color: transparent;
+    outline: 0;
+}
+
+.button2 {
+    border-radius: 50px;
+    background: transparent;
+    border-color: transparent;
+    outline: 0;
+}
+
+.nom-musee {
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.ville-musee {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+/*ACTIVE BUTTON*/
+
+.button1:active {
+    background-color: rgb(226, 70, 70);
+}
+
+.button2:active {
+    background-color: rgb(69, 168, 82);
+}
+
+
+/*END*/
+
+.red-cross {
+    width: 30vw;
+    height: 20vh;
+}
+
+.green-heart {
+    width: 30vw;
+    height: 20vh;
+}
+
+/*.thumbnail img{
+  width: 500px;
+  height:500px;
+  overflow:hidden;
+}*/
+/*CONTACT CSS*/
+
+textarea {
+    resize: none;
+}
+
+#contact-form {
+    margin-top: 5%;
+}
+
+.form-control:focus {
+    border-color: #c1272d;
+    -webkit-box-shadow: 0px 0px 9px -1px rgba(193, 39, 45, 1);
+    -moz-box-shadow: 0px 0px 9px -1px rgba(193, 39, 45, 1);
+    box-shadow: 0px 0px 9px -1px rgba(193, 39, 45, 1);
+}
+
+.js-hide-label {
+    opacity: 0;
+}
+
+.js-unhighlight-label {
+    color: #999
+}
+
+.btn-start-order {
+    margin-top: 3%;
+    background: none;
+    border: solid 1px;
+    color: #2f323a;
+    font-size: 2rem;
+    line-height: inherit;
+    text-transform: uppercase;
+}
